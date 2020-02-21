@@ -11,17 +11,23 @@ import org.openqa.selenium.support.FindBy;
 @Getter
 public class PurchaseBlock extends BasePage {
     private WebDriver driver;
-    @FindBy(xpath = "//a[@href='http://kuopassa.net/litecart/en/rubber-ducks-c-1/blue-duck-p-4']")
-    private WebElement purchaseItem;
+
+    @FindBy(xpath = "//div[@class='content']//span[@class='quantity']")
+    private WebElement amountOfPurchases;
+
     @FindBy(xpath = "//div[@class='content']")
     private WebElement shoppingCart;
+
+    @FindBy(xpath = "//div[@class='tab-content']")
+    private WebElement itemsContainer;
 
     public PurchaseBlock(WebDriver driver){
         super(driver);
     }
 
-    public PurchasePage buyItem(){
-        purchaseItem.click();
+    public PurchasePage buyItem(String userChoice){
+        Duck duck = new Duck();
+        duck.getElementByName(itemsContainer,userChoice).click();
         return new PurchasePage(driver);
     }
 

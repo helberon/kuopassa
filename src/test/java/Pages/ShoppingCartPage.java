@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 @Getter
 public class ShoppingCartPage extends BasePage {
     private WebDriver driver;
+
     @FindBy(id = "box-checkout-cart")
     private WebElement shoppingCartTable;
 

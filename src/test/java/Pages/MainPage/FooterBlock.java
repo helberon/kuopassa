@@ -14,11 +14,11 @@ public class FooterBlock extends BasePage {
     @FindBy(xpath = "//a[@href='http://kuopassa.net/litecart/en/about-us-i-1']")
     private WebElement aboutUsLink;
 
-    public FooterBlock(WebDriver driver){
+    public FooterBlock(WebDriver driver) {
         super(driver);
     }
 
-    public AboutUsPage goToAboutUsPage (){
+    public AboutUsPage goToAboutUsPage() {
         aboutUsLink.click();
         return new AboutUsPage(driver);
     }

@@ -9,18 +9,18 @@ import org.openqa.selenium.support.FindBy;
 public class LoginBlock extends BasePage {
     private WebDriver driver;
 
-    @FindBy(xpath = "/html/body/div/div[1]/div[2]/aside/div/div[2]/div[2]/form/div[1]/div/input")
+    @FindBy(xpath = "//input[@type='email']")
     private WebElement loginField;
-    @FindBy(xpath = "/html/body/div/div[1]/div[2]/aside/div/div[2]/div[2]/form/div[2]/div/input")
+    @FindBy(xpath = "//input[@type='password']")
     private WebElement passwordField;
-    @FindBy(xpath = "/html/body/div/div[1]/div[2]/aside/div/div[2]/div[2]/form/div[3]/button")
+    @FindBy(xpath = "//button[@name='login']")
     private WebElement signInButton;
 
-    public LoginBlock(WebDriver driver){
+    public LoginBlock(WebDriver driver) {
         super(driver);
     }
 
-    public LoginPage logInToSite(String login, String password){
+    public LoginPage logInToSite(String login, String password) {
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
         signInButton.click();

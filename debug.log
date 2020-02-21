@@ -1,3 +1,0 @@
-[0211/152325.974:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
-[0211/152325.976:ERROR:exception_snapshot_win.cc(98)] thread ID 6724 not found in process
-[0211/152325.976:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения. (0xc000010a)
