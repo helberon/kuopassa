@@ -1,8 +1,8 @@
 import Pages.MainPage.FooterBlock;
 import Pages.MainPage.LoginBlock;
 import Pages.MainPage.PurchaseBlock;
-import com.sun.org.glassfish.gmbal.Description;
 import core.DriverProvider;
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,7 +22,7 @@ public class TestCases {
         driver.get("http://kuopassa.net/litecart/en/");
     }
 
-    @Description("Verify correctness of text in About Us page")
+//    @Description("Verify correctness of text in About Us page")
     @Test
     public void aboutUsVerifyText() {
         FooterBlock instancePage = new FooterBlock(driver);
@@ -33,7 +33,7 @@ public class TestCases {
         Assert.assertEquals(aboutUsExpected, aboutUs);
     }
 
-    @Description("Verify getting bad login alert after login with wrong credentials")
+//    @Description("Verify getting bad login alert after login with wrong credentials")
     @Test
     public void badLoginWithAppropriateEmailFormat() {
         LoginBlock instancePage = new LoginBlock(driver);
@@ -41,7 +41,8 @@ public class TestCases {
                 .getBadLoginAlert().isDisplayed());
     }
 
-    @Description("Verify duck was added to Shopping Cart after buying it")
+//    @Description("Verify duck was added to Shopping Cart after buying it"
+    @Step("")
     @Test
     public void checkPurchaseInShoppingCart() throws InterruptedException {
         PurchaseBlock instancePage = new PurchaseBlock(driver);
